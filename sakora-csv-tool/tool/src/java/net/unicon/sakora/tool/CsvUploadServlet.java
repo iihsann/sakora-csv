@@ -33,8 +33,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import net.unicon.sakora.api.csv.CsvSyncService;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.quartz.JobDetail;
 import org.quartz.Scheduler;
@@ -95,7 +95,7 @@ public class CsvUploadServlet extends HttpServlet {
     private static final String OVERRIDE_IGNORE_MEMBERSHIP_REMOVALS = "ignoreMembershipRemovals";
     private static final String OVERRIDE_IGNORE_MISSING_SESSIONS = "ignoreMissingSessions";
 
-    static final Log LOG = LogFactory.getLog(CsvUploadServlet.class);
+    static final Logger LOG = LoggerFactory.getLogger(CsvUploadServlet.class);
 
     /**
      * Anything in this map is passed along to the sync context exactly as is,
@@ -253,7 +253,7 @@ public class CsvUploadServlet extends HttpServlet {
 					}
 					scheduler.addJob(jd, true); // need to always update the job details
 				} catch (SchedulerException e) {
-					LOG.warn( e );
+					LOG.warn("SchedulerException occurred", e);
 				}
 			}
 			else {

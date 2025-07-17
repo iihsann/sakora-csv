@@ -23,8 +23,8 @@ import java.util.Date;
 
 import net.unicon.sakora.api.csv.CsvSyncContext;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.sakaiproject.coursemanagement.api.CourseOffering;
 
 /**
@@ -36,7 +36,7 @@ import org.sakaiproject.coursemanagement.api.CourseOffering;
  * @author Joshua Ryan
  */
 public class CsvCourseOfferingHandler extends CsvHandlerBase {
-	static final Log log = LogFactory.getLog(CsvCourseOfferingHandler.class);
+	static final Logger log = LoggerFactory.getLogger(CsvCourseOfferingHandler.class);
 	
 	private boolean handleCanonicalCourseReferences = true;
 

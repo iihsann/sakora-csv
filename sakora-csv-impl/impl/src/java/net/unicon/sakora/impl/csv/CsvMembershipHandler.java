@@ -27,8 +27,9 @@ import net.unicon.sakora.api.csv.CsvSyncContext;
 import net.unicon.sakora.api.csv.model.Membership;
 import net.unicon.sakora.api.csv.model.SakoraLog;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.sakaiproject.coursemanagement.api.EnrollmentSet;
 import org.sakaiproject.coursemanagement.api.Section;
 import org.sakaiproject.coursemanagement.api.exception.IdNotFoundException;
@@ -46,7 +47,7 @@ import org.sakaiproject.genericdao.api.search.Search;
  */
 public class CsvMembershipHandler extends CsvHandlerBase {
 
-    static final Log LOG = LogFactory.getLog(CsvMembershipHandler.class);
+    static final Logger LOG = LoggerFactory.getLogger(CsvMembershipHandler.class);
 
     static final String MODE_SECTION = "section";
 

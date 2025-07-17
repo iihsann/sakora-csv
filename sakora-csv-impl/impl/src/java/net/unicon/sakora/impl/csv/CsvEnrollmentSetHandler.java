@@ -22,8 +22,8 @@ import java.util.Arrays;
 
 import net.unicon.sakora.api.csv.CsvSyncContext;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.sakaiproject.coursemanagement.api.EnrollmentSet;
 
 /**
@@ -35,7 +35,7 @@ import org.sakaiproject.coursemanagement.api.EnrollmentSet;
  * @author Joshua Ryan
  */
 public class CsvEnrollmentSetHandler extends CsvHandlerBase {
-	static final Log log = LogFactory.getLog(CsvEnrollmentSetHandler.class);
+	static final Logger log = LoggerFactory.getLogger(CsvEnrollmentSetHandler.class);
 
 	public CsvEnrollmentSetHandler() {
 	}

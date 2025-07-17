@@ -22,8 +22,8 @@ import java.util.Arrays;
 
 import net.unicon.sakora.api.csv.CsvSyncContext;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.sakaiproject.coursemanagement.api.CanonicalCourse;
 
 /**
@@ -34,7 +34,7 @@ import org.sakaiproject.coursemanagement.api.CanonicalCourse;
  *
  */
 public class CsvCanonicalCourseHandler extends CsvHandlerBase {
-	static final Log log = LogFactory.getLog(CsvCanonicalCourseHandler.class);
+	static final Logger log = LoggerFactory.getLogger(CsvCanonicalCourseHandler.class);
 
 	@Override
     public String getName() {

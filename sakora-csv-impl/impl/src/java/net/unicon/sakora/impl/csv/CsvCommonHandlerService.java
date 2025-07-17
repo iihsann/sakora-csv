@@ -31,8 +31,8 @@ import net.unicon.sakora.api.csv.CsvSyncContext;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.sakaiproject.component.api.ServerConfigurationService;
 import org.sakaiproject.coursemanagement.api.CourseManagementAdministration;
@@ -45,7 +45,7 @@ import org.sakaiproject.coursemanagement.api.CourseManagementService;
  * @author Aaron Zeckoski azeckoski@unicon.net
  */
 public class CsvCommonHandlerService {
-    static final Log log = LogFactory.getLog(CsvCommonHandlerService.class);
+    static final Logger log = LoggerFactory.getLogger(CsvCommonHandlerService.class);
 
     public static final String SYNC_VAR_ID = "id";
     public static final String SYNC_VAR_CONTEXT = "context";

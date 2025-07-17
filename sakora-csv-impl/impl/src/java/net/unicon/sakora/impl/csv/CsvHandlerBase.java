@@ -38,8 +38,9 @@ import net.unicon.sakora.api.csv.CsvSyncService;
 import net.unicon.sakora.api.csv.model.SakoraLog;
 import net.unicon.sakora.impl.csv.dao.CsvSyncDao;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.sakaiproject.authz.api.AuthzGroupService;
 import org.sakaiproject.component.api.ServerConfigurationService;
 import org.sakaiproject.content.api.ContentHostingService;
@@ -79,7 +80,7 @@ public abstract class CsvHandlerBase implements CsvHandler {
 	 * fatal error. Evaluated as a boolean.
 	 */
 	protected static final String READ_ALL_LINES = CsvSyncService.SYNC_CONTEXT_PROPERTY_KEY_PREFIX + "read-all-lines";
-	private final Log log = LogFactory.getLog(getClass());
+	private final Logger log = LoggerFactory.getLogger(getClass());
 	protected volatile boolean pleaseStop;
     protected String csvFileName;
 	protected int searchPageSize = 1000;

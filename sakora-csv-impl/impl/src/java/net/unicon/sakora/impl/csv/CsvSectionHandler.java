@@ -24,8 +24,10 @@ import java.util.Map;
 
 import net.unicon.sakora.api.csv.CsvSyncContext;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.sakaiproject.coursemanagement.api.Section;
 
 /**
@@ -37,7 +39,7 @@ import org.sakaiproject.coursemanagement.api.Section;
  */
 @SuppressWarnings("serial")
 public class CsvSectionHandler extends CsvHandlerBase {
-	static final Log log = LogFactory.getLog(CsvSectionHandler.class);
+	static final Logger log = LoggerFactory.getLogger(CsvSectionHandler.class);
 	
 	private String defaultSectionCategoryCode = "NONE";
 	private Map<String,String> sectionCategoryMap = new HashMap<String,String>(){{

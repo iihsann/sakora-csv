@@ -1,7 +1,7 @@
 package net.unicon.sakora.impl.csv.dao;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.sakaiproject.component.api.ServerConfigurationService;
 import org.sakaiproject.db.api.SqlService;
 
@@ -14,7 +14,7 @@ import org.sakaiproject.db.api.SqlService;
  */
 public class CsvIndexGenerator {
 
-	private static final Log log = LogFactory.getLog(CsvIndexGenerator.class);
+	private static final Logger log = LoggerFactory.getLogger(CsvIndexGenerator.class);
 	private SqlService sqlService;
 	private ServerConfigurationService serverConfigurationService;
 	

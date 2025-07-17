@@ -26,8 +26,9 @@ import java.util.List;
 import net.unicon.sakora.api.csv.CsvSyncContext;
 import net.unicon.sakora.api.csv.model.Session;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.sakaiproject.coursemanagement.api.AcademicSession;
 import org.sakaiproject.genericdao.api.search.Restriction;
 import org.sakaiproject.genericdao.api.search.Search;
@@ -41,7 +42,7 @@ import org.sakaiproject.genericdao.api.search.Search;
  * @author Joshua Ryan
  */
 public class CsvAcademicSessionHandler extends CsvHandlerBase {
-	static final Log log = LogFactory.getLog(CsvAcademicSessionHandler.class);
+	static final Logger log = LoggerFactory.getLogger(CsvAcademicSessionHandler.class);
 
 	@Override
 	public String getName() {

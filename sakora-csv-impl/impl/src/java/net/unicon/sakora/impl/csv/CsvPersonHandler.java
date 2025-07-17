@@ -29,8 +29,10 @@ import net.unicon.sakora.api.csv.model.Person;
 import net.unicon.sakora.api.csv.model.SakoraLog;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.sakaiproject.genericdao.api.search.Restriction;
 import org.sakaiproject.genericdao.api.search.Search;
 import org.sakaiproject.id.api.IdManager;
@@ -60,7 +62,7 @@ import org.sakaiproject.user.api.UserPermissionException;
  */
 @SuppressWarnings("serial")
 public class CsvPersonHandler extends CsvHandlerBase {
-	static final Log log = LogFactory.getLog(CsvPersonHandler.class);
+	static final Logger log = LoggerFactory.getLogger(CsvPersonHandler.class);
 
 	private static final String ID_FIELD_NAME = "id";
 

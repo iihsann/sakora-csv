@@ -36,7 +36,8 @@
     <parent>
         <artifactId>master</artifactId>
         <groupId>org.sakaiproject</groupId>
-        <version>21-SNAPSHOT</version>
+        <version>25-SNAPSHOT</version>
+	      <!--<relativePath>../sakai/master/pom.xml</relativePath>-->
     </parent>
 
     <profiles>

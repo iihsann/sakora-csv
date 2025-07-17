@@ -29,8 +29,9 @@ import net.unicon.sakora.api.csv.CsvSyncService;
 import net.unicon.sakora.api.csv.model.SakoraLog;
 import net.unicon.sakora.impl.csv.dao.CsvSyncDao;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.sakaiproject.component.api.ServerConfigurationService;
 
 /**
@@ -42,7 +43,7 @@ import org.sakaiproject.component.api.ServerConfigurationService;
  */
 public class CsvSyncServiceImpl implements CsvSyncService {
 
-	private static final Log log = LogFactory.getLog(CsvSyncServiceImpl.class);
+	private static final Logger log = LoggerFactory.getLogger(CsvSyncServiceImpl.class);
 	
 	/**
 	 * Sync context properties key. Points to a String representing the
